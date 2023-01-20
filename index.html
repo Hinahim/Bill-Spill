@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bill Spill</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="root-container">
+        <div class="heading-container">
+            <div>BILL</div>
+            <div>SPILL</div>
+        </div>
+        <div class="bottom-container">
+            <div class="left-container">
+                <div class="input-head">
+                    <h3> Bill</h3>
+                    <div class="input">
+                        <span id="spn1">₹</span>
+                        <input id="billamt" type="number" min="1" placeholder="0" inputmode="numeric">
+                    </div>
+                </div>
+                <div class="button-list">
+                    <h3> Select tip %</h3>
+                    <div class="button-div">
+                        <button class="but" type="button" onclick="calc('perFive')">5%</button>
+                        <button class="but" type="button" onclick="calc('perTen')">10%</button>
+                        <button class="but" type="button" onclick="calc('perFifteen')">15%</button>
+                    </div>
+                    <div class="button-div">
+                        <button class="but" type="button" onclick="calc('perTwentyFive')">25%</button>
+                        <button class="but" type="button" onclick="calc('perFifty')">50%</button>
+                        <button class="but" type="button" onclick="calc('perSeventyFive')">75%</button>
+                    </div>
+                </div>
+                <div class="people">
+                    <h3>Number of people </h3>
+                    <div class="people-count">
+                        <span id="spn">🙎🏻</span>
+                        <button id="plus" type="button" onclick="ope('plus')">+</button>
+                        <span id="res">0</span>
+                        <button id="minus" type="button" onclick="ope('minus')">-</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right-container">
+
+                <div class="tip-amount">
+                    <div>
+                        <h4> Tip Amount</h4>
+                        <h4> /Person</h4>
+                    </div>
+                    <div>
+                        <h2 id="tipAmtPerPerson"> ₨0.00</h2>
+                    </div>
+                </div>
+
+                <div class="tip-amount">
+                    <div>
+                        <h4> Total </h4>
+                        <h4> /Person</h4>
+                    </div>
+                    <div>
+                        <h2 id="totalPerPerson"> ₨0.00</h2>
+                    </div>
+                </div>
+
+                <button id="generate" type="button" onclick="doAction()"> Generate</button>
+
+            </div>
+        </div>
+        <div class="last-container">
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
